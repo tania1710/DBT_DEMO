@@ -6,7 +6,6 @@ with cte_daily_weather as (
            humidity,
            clouds
     from {{ source('demo', 'weather') }}
-    --limit 10
 ), cte_daily_weather_agg as (
     select daily_weather,
            weather,

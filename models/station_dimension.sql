@@ -4,7 +4,7 @@ with cte_bike as (
            START_STATIOn_name as station_name,
            start_lat as station_lat,
            start_lng as start_station_lng
-    from {{ source('demo', 'bike') }}    
+    from {{ ref('stg_bike') }}
 )
 select *
 from cte_bike
